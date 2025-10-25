@@ -1,6 +1,6 @@
 def get_book_text(path_to_file: str) -> str:
     book_strings = ""
-    with open(path_to_file) as f:
+    with open(path_to_file, encoding="utf-8-sig") as f:
         book_strings = f.read()
     return book_strings
 
@@ -19,3 +19,4 @@ def get_num_chars(book_text: str) -> int:
                 num_characters[char] = 0
             num_characters[char] += 1
     return num_characters
+
