@@ -20,3 +20,12 @@ def get_num_chars(book_text: str) -> int:
             num_characters[char] += 1
     return num_characters
 
+def sort_on(items: dict) -> int:
+    return items["num"]
+
+def sort_chars(char_dict: dict) -> list:
+    sorted_dicts = []
+    for item in char_dict:
+        sorted_dicts.append({"char": item, "num": char_dict[item]})
+    sorted_dicts.sort(reverse=True, key=sort_on)
+    return sorted_dicts
